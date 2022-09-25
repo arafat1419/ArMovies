@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.arafat1419.armovies.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_genresFragment"
+            app:destination="@id/genresFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_trailerFragment"
+            app:destination="@id/trailerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.arafat1419.armovies.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movie_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_to_trailerFragment"
+            app:destination="@id/trailerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.arafat1419.armovies.ui.movies.MoviesFragment"
+        android:label="fragment_movies"
+        tools:layout="@layout/fragment_movies" >
+        <action
+            android:id="@+id/action_moviesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="genre_id"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <action
+            android:id="@+id/action_moviesFragment_to_trailerFragment"
+            app:destination="@id/trailerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.arafat1419.armovies.ui.genres.GenresFragment"
+        android:label="fragment_genres"
+        tools:layout="@layout/fragment_genres" >
+        <action
+            android:id="@+id/action_genresFragment_to_moviesFragment"
+            app:destination="@id/moviesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trailerFragment"
+        android:name="com.arafat1419.armovies.ui.trailer.TrailerFragment"
+        android:label="fragment_trailer"
+        tools:layout="@layout/fragment_trailer" >
+        <argument
+            android:name="movie_id"
+            app:argType="integer"/>
+    </fragment>
+</navigation>

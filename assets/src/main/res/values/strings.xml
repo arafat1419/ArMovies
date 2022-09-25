@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="story_line">Story Line</string>
+    <string name="recommended">Recommended</string>
+    <string name="format_movie_position">%1$d/%2$d</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="genres">Genres</string>
+    <string name="popular">Popular</string>
+    <string name="show_all">Show All</string>
+    <string name="reviews">Reviews</string>
+    <string name="format_movie_subtitle">%1$s | %2$s</string>
+</resources>
